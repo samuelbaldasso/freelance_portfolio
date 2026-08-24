@@ -6,10 +6,21 @@ export const siteConfig = {
   avatarUrl: "https://github.com/samuelbaldasso.png",
   email: "baldassosamuel93@gmail.com",
   location: "Brasil",
+  availableForWork: true,
   social: {
     github: "https://github.com/samuelbaldasso",
     linkedin: "https://www.linkedin.com/in/samuel-baldasso",
   },
+  stack: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Java",
+    "Spring Boot",
+    "GraphQL",
+    "REST",
+  ],
   about: {
     heading: "Sobre",
     paragraphs: [
@@ -41,6 +52,7 @@ export const siteConfig = {
   ],
   contact: {
     heading: "Vamos conversar",
-    description: "Tem um projeto em mente ou precisa de ajuda pontual? Me conta os detalhes e eu retorno o mais rápido possível.",
+    description:
+      "Tem um projeto em mente ou precisa de ajuda pontual? Me manda um e-mail direto com os detalhes e eu retorno o mais rápido possível.",
   },
 } as const;

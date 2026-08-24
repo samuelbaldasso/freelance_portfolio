@@ -4,10 +4,10 @@ import type { PortfolioProject } from "@/types/github";
 
 export function ProjectCard({ project }: { project: PortfolioProject }) {
   return (
-    <div className="flex flex-col justify-between rounded-lg border border-border bg-card p-6">
+    <div className="group flex flex-col justify-between rounded-xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
       <div>
         <div className="flex items-start justify-between gap-3">
-          <h3 className="font-medium">{project.name}</h3>
+          <h3 className="font-medium transition-colors group-hover:text-accent">{project.name}</h3>
           {project.stars > 0 && (
             <span className="flex items-center gap-1 text-xs text-muted-foreground">
               <Star className="size-3" />
@@ -23,7 +23,7 @@ export function ProjectCard({ project }: { project: PortfolioProject }) {
             {project.topics.map((topic) => (
               <span
                 key={topic}
-                className="rounded-full bg-muted px-2.5 py-1 text-xs text-muted-foreground"
+                className="rounded-full bg-accent-soft px-2.5 py-1 text-xs font-medium text-accent"
               >
                 {topic}
               </span>
