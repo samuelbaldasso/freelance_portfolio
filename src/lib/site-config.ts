@@ -8,7 +8,7 @@ export const siteConfig = {
   location: "Brasil",
   social: {
     github: "https://github.com/samuelbaldasso",
-    linkedin: "https://www.linkedin.com/in/samuelbaldasso",
+    linkedin: "https://www.linkedin.com/in/samuel-baldasso",
   },
   about: {
     heading: "Sobre",
