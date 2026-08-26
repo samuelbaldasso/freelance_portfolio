@@ -18,7 +18,7 @@ export function Hero() {
                   <span className="absolute inline-flex size-full animate-ping rounded-full bg-success opacity-75" />
                   <span className="relative inline-flex size-1.5 rounded-full bg-success" />
                 </span>
-                Disponível para novos projetos
+                Available for new projects
               </span>
             )}
 
@@ -33,14 +33,14 @@ export function Hero() {
                 href="#contato"
                 className="group flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-foreground transition-transform hover:scale-[1.02] active:scale-[0.98]"
               >
-                Iniciar um projeto
+                Start a project
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
                 href="#projetos"
                 className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:bg-muted"
               >
-                Ver projetos
+                View projects
               </Link>
             </div>
           </div>

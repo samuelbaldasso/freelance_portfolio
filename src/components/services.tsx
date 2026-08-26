@@ -8,7 +8,7 @@ export function Services() {
   return (
     <section id="servicos" className="border-t border-border bg-muted/40">
       <div className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="text-2xl font-semibold tracking-tight">Serviços</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Services</h2>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {siteConfig.services.map((service, index) => {

@@ -8,7 +8,7 @@ function toPortfolioProject(repo: GitHubRepo): PortfolioProject {
   return {
     id: repo.id,
     name: repo.name,
-    description: repo.description ?? "Sem descrição no repositório.",
+    description: repo.description ?? "No description provided.",
     url: repo.html_url,
     demoUrl: repo.homepage && repo.homepage.trim().length > 0 ? repo.homepage : null,
     language: repo.language,
@@ -38,7 +38,7 @@ export async function getPortfolioProjects(): Promise<PortfolioProject[]> {
     );
 
     if (!response.ok) {
-      console.error(`GitHub API respondeu ${response.status} ao listar repositórios.`);
+      console.error(`GitHub API responded with ${response.status} while listing repositories.`);
       return [];
     }
 
@@ -48,7 +48,7 @@ export async function getPortfolioProjects(): Promise<PortfolioProject[]> {
       .filter((repo) => !repo.fork && !repo.archived && repo.topics?.includes(PORTFOLIO_TOPIC))
       .map(toPortfolioProject);
   } catch (error) {
-    console.error("Falha ao buscar repositórios do GitHub:", error);
+    console.error("Failed to fetch repositories from GitHub:", error);
     return [];
   }
 }

@@ -40,7 +40,7 @@ export function ProjectCard({ project }: { project: PortfolioProject }) {
           className="flex items-center gap-1.5 font-medium transition-opacity hover:opacity-70"
         >
           <GithubIcon className="size-4" />
-          Código
+          Code
         </a>
         {project.demoUrl && (
           <a

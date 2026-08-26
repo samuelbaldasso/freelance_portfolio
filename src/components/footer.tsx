@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:justify-between">
         <p>
-          © {year} {siteConfig.name}. Todos os direitos reservados.
+          © {year} {siteConfig.name}. All rights reserved.
         </p>
 
         <div className="flex items-center gap-4">

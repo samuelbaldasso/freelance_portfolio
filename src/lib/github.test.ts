@@ -8,7 +8,7 @@ function makeRepo(overrides: Partial<GitHubRepo>): GitHubRepo {
     name: "example-repo",
     full_name: "samuelbaldasso/example-repo",
     html_url: "https://github.com/samuelbaldasso/example-repo",
-    description: "Um repositório de exemplo",
+    description: "An example repository",
     homepage: null,
     language: "TypeScript",
     topics: ["portfolio"],
@@ -25,7 +25,7 @@ describe("getPortfolioProjects", () => {
     vi.unstubAllGlobals();
   });
 
-  it("retorna apenas repositórios com a topic 'portfolio', ignorando forks e arquivados", async () => {
+  it("returns only repositories with the 'portfolio' topic, ignoring forks and archived", async () => {
     const repos: GitHubRepo[] = [
       makeRepo({ id: 1, name: "shown", topics: ["portfolio", "react"] }),
       makeRepo({ id: 2, name: "no-topic", topics: ["react"] }),
@@ -48,7 +48,7 @@ describe("getPortfolioProjects", () => {
     expect(projects[0].topics).not.toContain("portfolio");
   });
 
-  it("retorna lista vazia quando a API do GitHub responde com erro", async () => {
+  it("returns an empty list when the GitHub API responds with an error", async () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockResolvedValue({
@@ -63,7 +63,7 @@ describe("getPortfolioProjects", () => {
     expect(projects).toEqual([]);
   });
 
-  it("retorna lista vazia quando o fetch lança uma exceção (ex.: falha de rede)", async () => {
+  it("returns an empty list when fetch throws an exception (e.g. network failure)", async () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockRejectedValue(new Error("network error")),
@@ -74,7 +74,7 @@ describe("getPortfolioProjects", () => {
     expect(projects).toEqual([]);
   });
 
-  it("usa descrição padrão quando o repositório não tem description", async () => {
+  it("uses a default description when the repository has none", async () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockResolvedValue({
@@ -85,6 +85,6 @@ describe("getPortfolioProjects", () => {
 
     const projects = await getPortfolioProjects();
 
-    expect(projects[0].description).toBe("Sem descrição no repositório.");
+    expect(projects[0].description).toBe("No description provided.");
   });
 });

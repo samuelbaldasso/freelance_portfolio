@@ -9,7 +9,7 @@ export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- padrão oficial do next-themes para evitar mismatch de hidratação (tema real só existe no client)
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- official next-themes pattern to avoid hydration mismatch (real theme only exists on the client)
     setMounted(true);
   }, []);
 
@@ -24,7 +24,7 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className="flex size-9 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-muted"
-      aria-label={isDark ? "Ativar tema claro" : "Ativar tema escuro"}
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
     >
       {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </button>

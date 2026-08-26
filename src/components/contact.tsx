@@ -36,7 +36,7 @@ export function Contact() {
               <ArrowUpRight className="size-5 opacity-70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </div>
             <div className="mt-6">
-              <p className="text-sm opacity-80">Envie um e-mail direto</p>
+              <p className="text-sm opacity-80">Send a direct email</p>
               <p className="mt-1 text-lg font-medium break-all">{siteConfig.email}</p>
             </div>
           </a>

@@ -3,10 +3,10 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/site-config";
 
 const navItems = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#contato", label: "Contato" },
+  { href: "#sobre", label: "About" },
+  { href: "#servicos", label: "Services" },
+  { href: "#projetos", label: "Projects" },
+  { href: "#contato", label: "Contact" },
 ];
 
 export function Header() {
@@ -36,7 +36,7 @@ export function Header() {
           {siteConfig.availableForWork && (
             <span className="hidden items-center gap-1.5 rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground md:flex">
               <span className="size-1.5 rounded-full bg-success" />
-              Disponível
+              Available
             </span>
           )}
           <ThemeToggle />
