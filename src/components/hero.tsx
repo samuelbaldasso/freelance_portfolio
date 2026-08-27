@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
@@ -42,6 +42,14 @@ export function Hero() {
               >
                 View projects
               </Link>
+              <a
+                href="/Samuel_Baldasso_Resume_Java.pdf"
+                download
+                className="group flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:bg-muted"
+              >
+                <Download className="size-4" />
+                Download resume
+              </a>
             </div>
           </div>
 
